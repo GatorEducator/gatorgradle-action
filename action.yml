@@ -1,0 +1,13 @@
+name: 'GatorGradle'
+description: 'Execute GatorGradle'
+author: 'Saejin Mahlau-Heinert'
+runs:
+  using: 'composite'
+  steps:
+    - run: pip install pipenv
+      shell: bash
+    - run: gradle grade
+      shell: bash
+branding:
+  icon: 'list'
+  color: 'green'
