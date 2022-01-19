@@ -9,5 +9,5 @@ runs:
     - run: gradle grade
       shell: bash
 branding:
-  icon: 'list'
+  icon: 'user-check'
   color: 'green'
