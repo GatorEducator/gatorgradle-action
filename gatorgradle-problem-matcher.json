@@ -1,0 +1,24 @@
+{
+  "problemMatcher": [
+    {
+      "owner": "gatorgradle",
+      "pattern": [
+        {
+          "regexp": "^.*-~-.*FAILURES.*-~-.*$"
+        },
+        {
+          "regexp": "^.*$"
+        },
+        {
+          "regexp": "✘(.*)$",
+          "code": 1
+        },
+        {
+          "regexp": ".*➔(.*)$",
+          "message": 1,
+          "loop": true
+        }
+      ]
+    }
+  ]
+}

@@ -8,7 +8,9 @@ runs:
         echo "::group::Install Pipenv"
         pip install pipenv
         echo "::endgroup::"
+        echo "::add-matcher::gatorgradle-problem-matcher.json"
         gradle grade
+        echo "::remove-matcher owner=gatorgradle::"
       shell: bash
 branding:
   icon: 'user-check'
