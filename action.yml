@@ -4,13 +4,11 @@ author: 'Saejin Mahlau-Heinert'
 runs:
   using: 'composite'
   steps:
-    - run: echo "::group::Install Pipenv"
-      shell: bash
-    - run: pip install pipenv
-      shell: bash
-    - run: echo "::endgroup::"
-      shell: bash
-    - run: gradle grade
+    - run: |
+        echo "::group::Install Pipenv"
+        pip install pipenv
+        echo "::endgroup::"
+        gradle grade
       shell: bash
 branding:
   icon: 'user-check'
