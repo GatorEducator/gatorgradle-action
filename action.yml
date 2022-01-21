@@ -9,7 +9,7 @@ runs:
         pip install pipenv
         echo "::endgroup::"
         echo "::add-matcher::${{ github.action_path }}/gatorgradle-problem-matcher.json"
-        gradle grade
+        gradle --no-daemon grade
         echo "::remove-matcher owner=gatorgradle::"
       shell: bash
 branding:
