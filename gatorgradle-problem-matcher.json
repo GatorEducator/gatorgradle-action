@@ -4,19 +4,12 @@
       "owner": "gatorgradle",
       "pattern": [
         {
-          "regexp": "^.*-~-.*FAILURES.*-~-.*$"
+          "regexp": "✘\\x1B\\[0m  (.*)$",
+          "message": 1
         },
         {
-          "regexp": "^.*$"
-        },
-        {
-          "regexp": "✘(.*)$",
+          "regexp": "➔\\x1B\\[0m  \\x1B\\[33m(.*)\\x1B\\[0m$",
           "code": 1
-        },
-        {
-          "regexp": ".*➔(.*)$",
-          "message": 1,
-          "loop": true
         }
       ]
     }
