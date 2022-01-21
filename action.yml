@@ -8,7 +8,7 @@ runs:
         echo "::group::Install Pipenv"
         pip install pipenv
         echo "::endgroup::"
-        echo "::add-matcher::gatorgradle-problem-matcher.json"
+        echo "::add-matcher::${{ github.action_path }}/gatorgradle-problem-matcher.json"
         gradle grade
         echo "::remove-matcher owner=gatorgradle::"
       shell: bash
