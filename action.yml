@@ -6,7 +6,7 @@ runs:
   steps:
     - run: |
         echo "::group::Install Pipenv"
-        pip install pipenv
+        pip install pipenv==2022.1.8
         echo "::endgroup::"
         echo "::add-matcher::${{ github.action_path }}/gatorgradle-problem-matcher.json"
         gradle --no-daemon grade
